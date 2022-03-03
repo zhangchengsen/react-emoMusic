@@ -9,11 +9,24 @@
       name="description"
       content="Web site created using create-react-app"
     />
-    <title>React App</title>
+    
+    <title>emo Music</title>
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
    
   </body>
+  <script>
+    document.body.onkeydown = function(event) {
+        var e = window.event || event;
+          if(e.keyCode === 32) {
+            if (e.preventDefault) {
+              e.preventDefault();
+          } else {
+              window.event.returnValue = false;
+          }
+        }
+    }
+  </script>
 </html>

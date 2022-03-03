@@ -94,6 +94,7 @@ export const HeaderRight = styled.div`
         }
     }
     .login {
+        color: #fff;
         padding: 19px 10px;
         margin-top: 7px;
         color: #787878;

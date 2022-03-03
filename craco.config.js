@@ -6,5 +6,17 @@ module.exports = {
             "@": resolve("src"),
             "components": resolve("src/components")
         }
-    }
+    },
+    // devServer: {
+    //     proxy: {
+    //         '/api': {
+    //             target: 'http://39.96.217.68:2003',
+    //             changeOrigin: true,
+    //             pathRewrite: {
+    //                 "^/api": ''
+    //             }
+    //         }
+    //     },
+    // },
+
 }

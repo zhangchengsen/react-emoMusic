@@ -22,7 +22,6 @@ function YmtxAppHeader() {
                 <NavLink
                   key={idx}
                   to={v.to}
-                  exact={true}
                   activeClassName={"active"}
                   className="selectItem "
                 >
