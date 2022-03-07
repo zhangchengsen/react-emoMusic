@@ -1,9 +1,15 @@
 import React, { memo } from "react";
 import { ThemeCoverWrapper } from "./style";
 import { imageFormater, countFormater } from "@/utils/helper";
+import { GetSongsDetail } from "@/store/modules/player/actionCreator";
+import { useDispatch } from "react-redux";
 function HotCard(props) {
+  const dispatch = useDispatch();
+  const playRecommend = (id) => {
+    dispatch(GetSongsDetail(id));
+  };
   return (
-    <ThemeCoverWrapper>
+    <ThemeCoverWrapper onClick={() => playRecommend(props.id)}>
       <div className="cover-top text-nowrap">
         <img src={imageFormater(props.picUrl, 140)} alt=""></img>
         <div className="cover sprite_cover">

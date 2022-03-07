@@ -163,3 +163,26 @@ span:hover.link {
   text-decoration: underline;
   cursor: pointer;
 }
+.flex {
+  display: flex;
+}
+.align-center {
+  align-items: center;
+}
+.justify-center {
+  justify-content: center;
+}
+.justify-between {
+  justify-content: space-between;
+}
+.w-100 {
+  width: 100%;
+}
+.hover-class {
+}
+.hover-class:hover .underline {
+  text-decoration: underline;
+}
+.bg-dark {
+  background-color: rgba(51, 51, 51);
+}

@@ -1,5 +1,29 @@
 import styled from "styled-components";
 
+export const Play = styled.div` 
+    .container {
+      height: 32px;
+      .play {
+        box-sizing: border-box;
+        opacity: 0;
+        margin-right: 20px;
+        width: 17px;
+        height: 17px;
+        background-position: 0 -103px;
+        &:hover {
+          background-color: #f1f1f1;
+        }
+      }
+    }
+    .container:hover {
+      text-decoration: underline;
+    }
+    .container:hover .play{
+      opacity: 1;
+    }
+      
+      
+`
 export const TopRankingWrapper = styled.div`
   display: flex;
   align-items: center;

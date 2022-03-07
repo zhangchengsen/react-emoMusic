@@ -2,7 +2,7 @@ import React, { memo, useEffect, useRef, useCallback, useState } from "react";
 import { getBanner } from "@/store/modules/discover/actionCreator";
 import { useSelector, useDispatch, shallowEqual } from "react-redux";
 import Hot from "./components/hot";
-// import RankList from "./components/rankList/index";
+import RankList from "./components/rankList";
 import {
   CarouselWrapper,
   LeftWrapper,
@@ -74,7 +74,7 @@ function Recommend(props) {
           <RecommendLeft>
             <Hot></Hot>
             <NewAlbum></NewAlbum>
-            {/* <RankList></RankList> */}
+            <RankList></RankList>
           </RecommendLeft>
           <RecommendRight></RecommendRight>
         </Content>

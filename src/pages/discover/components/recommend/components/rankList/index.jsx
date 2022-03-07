@@ -12,9 +12,11 @@ import {
 import TopRank from "./topRank";
 const index = memo(() => {
   const dispatch = useDispatch();
-  const { topRankInfo } = useSelector(
+  const { topRankInfo, rankInfo, newRankInfo } = useSelector(
     (state) => ({
       topRankInfo: state.recommend.topRankInfo,
+      rankInfo: state.recommend.rankInfo,
+      newRankInfo: state.recommend.newRankInfo,
     }),
     shallowEqual
   );
@@ -29,7 +31,11 @@ const index = memo(() => {
         <RecommendLeft>
           <Header title="榜单"></Header>
           <div className="tops">
-            <TopRank topInfo={topRankInfo}></TopRank>
+            <TopRank
+              topInfo={topRankInfo}
+              rankInfo={rankInfo}
+              newRankInfo={newRankInfo}
+            ></TopRank>
           </div>
         </RecommendLeft>
         <RecommendRight></RecommendRight>

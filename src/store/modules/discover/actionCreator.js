@@ -41,6 +41,7 @@ export const getBanner = dispatch => {
 export const getHot = (limit) => {
     return (dispatch) => {
         getPerson(limit).then(res => {
+            console.log('hot', res.result)
             dispatch(UpdateHot(res.result))
         }).catch(err => {
             console.log(err)
@@ -50,7 +51,6 @@ export const getHot = (limit) => {
 export const getAlbum = (limit) => {
     return (dispatch) => {
         reqAlbum(limit).then(res => {
-            console.log(res)
             dispatch(UpdateAlbum(res.albums))
         }).catch(err => {
             console.log(err)
@@ -62,19 +62,16 @@ export const getRank = (idx) => {
         switch (idx) {
             case 0:
                 reqRank(idx).then(res => {
-                    console.log(res)
                     dispatch(UpdateRank(res.playlist))
                 })
                 break;
             case 2:
                 reqRank(idx).then(res => {
-                    console.log(res)
                     dispatch(UpdateNewRanking(res.playlist))
                 })
                 break;
             case 3:
                 reqRank(idx).then(res => {
-                    console.log(res)
                     dispatch(UpdateTopRanking(res.playlist))
                 })
                 break;

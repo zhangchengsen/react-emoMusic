@@ -15,7 +15,9 @@ const index = memo(() => {
   );
   useEffect(() => {
     dispatch(getHot(8));
+    console.log(hotList);
   }, [dispatch]);
+
   return (
     <>
       <Header

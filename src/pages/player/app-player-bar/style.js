@@ -148,7 +148,7 @@ export const Operator = styled.div`
 
     .loop {
       background-position: ${props => {
-    switch (props.sequence) {
+    switch (props.mode) {
       case 1:
         return "-66px -248px";
       case 2:
@@ -157,6 +157,9 @@ export const Operator = styled.div`
         return "-3px -344px";
     }
   }};
+    }
+    .loop:hover {
+      cursor: pointer;  
     }
 
     .playlist {
@@ -167,4 +170,5 @@ export const Operator = styled.div`
       background-position: -42px -68px;
     }
   }
+  
 `
